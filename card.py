@@ -26,11 +26,7 @@ class Card:
 class Deck:
     def __init__(self):
         """Initializes the Deck with 52 cards."""
-        self.cards = []
-        for suit in range(4):
-            for rank in range(13):
-                card = Card(suit, rank)
-                self.cards.append(card)
+        self.cards = [Card(suit, rank) for suit in range(4) for rank in range(13)]
         self.shuffle()
 
     def __str__(self):
@@ -138,4 +134,4 @@ def main(argv=[]):
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    # main(sys.argv)
